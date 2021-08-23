@@ -44,6 +44,7 @@ class Server {
         this.app.listen(this.port, ()=>{
             console.log(`Listening on port ${this.port}`)
         })
+        this.app.on( "error" , err => console.log(`Error en el servidor :  ${err}`))
     }
 }
 
